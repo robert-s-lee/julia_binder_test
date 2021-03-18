@@ -5,3 +5,7 @@ go to the URL below and it will launch an interactive Julia environment:
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/binder-examples/demo-julia/master?filepath=demo.ipynb)
 
+
+Call with
+- `./demo.sh --num 5` in bash/wsl/etc.
+- `julia --project=@. demo.jl --num 5` directly from the command-line
