@@ -1,4 +1,3 @@
-import Pkg; Pkg.add("CUDA")
 using CUDA
 using Test
 

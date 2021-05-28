@@ -1,0 +1,15 @@
+compute:
+  provider:
+    credentials: cc-b3e09
+    region: us-east-1
+    vendor: aws
+  
+  train:
+    cpus: 1
+    disk_size: 200
+    gpus: 0
+    instance: t2.medium
+    framework: julia
+    max_nodes: 10
+    memory: null
+    scale_down_seconds: 1800
