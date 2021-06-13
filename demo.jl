@@ -10,3 +10,9 @@ println("mean = $m, std = $s of $num values")
 open("myout.txt","w") do f 
     write(f, @sprintf("mean = %s, std = %s of %s\n", m, s, num))
 end
+
+while i <= 20
+        println(i)
+        sleep(2)
+        global i += 1
+    end
