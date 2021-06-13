@@ -11,8 +11,9 @@ open("myout.txt","w") do f
     write(f, @sprintf("mean = %s, std = %s of %s\n", m, s, num))
 end
 
-while i <= 20
+i = 0
+while i <= 60
         println(i)
-        sleep(2)
+        sleep(1)
         global i += 1
     end
