@@ -3,7 +3,8 @@
 
 FROM julia:1.6.5
 
-RUN julia -e 'Pkg.add("ArgParse")'
+RUN julia -e 'using Pkg; Pkg.add("ArgParse")'
+RUN julia -e 'using Pkg; Pkg.status();'
 
 # mandatory for Grid.ai
 WORKDIR /gridai/project
