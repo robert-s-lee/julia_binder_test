@@ -20,5 +20,5 @@ grid run --instance_type t2.medium \
 --dockerfile julia165.dockerfile \
 --cpus 1 \
 demo.jl \
---num "[10]"
+--num "[10,100,1000,10000]"
 ```
