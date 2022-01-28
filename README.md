@@ -11,3 +11,21 @@ https://platform.grid.ai/#/runs?script=https://github.com/rlizzo/julia_binder_te
 Call with
 - `./demo.sh --num 5` in bash/wsl/etc.
 - `julia --project=@. demo.jl --num 5` directly from the command-line
+
+Using Dockerfile
+
+```bash
+grid run --instance_type t2.medium \
+--framework julia \
+--dockerfile julia165.dockerfile \
+demo.jl \
+--num "[10,100,1000,10000]"
+```
+
+```bash
+grid run --instance_type t2.medium \
+--framework julia \
+--dockerfile julia171.dockerfile \
+demo.jl \
+--num "[10,100,1000,10000]"
+```
