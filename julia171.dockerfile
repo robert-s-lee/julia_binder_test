@@ -3,6 +3,8 @@
 
 FROM julia:1.7.1
 
+RUN /opt/julia/bin/julia -e 'Pkg.add("ArgParse")'
+
 # mandatory for Grid.ai
 WORKDIR /gridai/project
 COPY . .
