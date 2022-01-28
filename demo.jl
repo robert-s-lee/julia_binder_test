@@ -1,7 +1,21 @@
 using LinearAlgebra, Statistics, Printf
-# commandline arguments.  In reality, use ArgParse equivalents
-#
-num = parse(Int64,ARGS[2])
+using ArgParse
+
+function parse_commandline()
+  s = ArgParseSettings()
+
+  @add_arg_table s begin
+      "--num"
+          help = "a number of random seed"
+          arg_type = Int
+          default = 0
+  end
+
+  return parse_args(s)
+end
+
+parsed_args = parse_commandline()
+num = parsed_args["num"]
 ϵ = randn(num)
 m = mean(ϵ)
 s = std(ϵ)

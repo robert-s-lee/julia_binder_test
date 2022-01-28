@@ -9,3 +9,16 @@ go to the URL below and it will launch an interactive Julia environment:
 Call with
 - `./demo.sh --num 5` in bash/wsl/etc.
 - `julia --project=@. demo.jl --num 5` directly from the command-line
+
+Run on Grid.ai with Julia 1.6.1 or Julia 1.7.1
+
+```
+git clone https://github.com/rlizzo/julia_binder_test
+cd julia_binder_test
+grid run --instance_type t2.medium \
+--framework julia \
+--dockerfile julia165.dockerfile \
+--cpus 1 \
+demo.jl \
+--num "[10]"
+```
